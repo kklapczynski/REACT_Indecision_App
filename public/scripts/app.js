@@ -5,18 +5,25 @@
 console.log("App is running!");
 
 // JSX - JS XML ( JavaScript syntax extension) - React uses it to build templates
+// create app object with title and subtitle
+// use it in template
+// render
+var app = {
+    title: "Indecision App",
+    subtitle: "Application to make you decide quicker!"
+};
 var template = React.createElement(
     "div",
     null,
     React.createElement(
         "h1",
         null,
-        "Does it REALLY?"
+        app.title
     ),
     React.createElement(
         "p",
         null,
-        "Text in paragraph"
+        app.subtitle
     ),
     React.createElement(
         "ol",
@@ -64,4 +71,4 @@ var template2 = React.createElement(
 
 var htmlElToRenderTemplateIn = document.getElementById("app");
 
-ReactDOM.render(template2, htmlElToRenderTemplateIn);
+ReactDOM.render(template, htmlElToRenderTemplateIn);
